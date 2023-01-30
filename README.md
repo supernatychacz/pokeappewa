@@ -13,7 +13,7 @@ Download the below extensions
 Type the following command in your terminal to clone this project on your computer
 
 ```sh
-git clone --single-branch --branch pokedextemplate https://github.com/adityar15/vuejsdemo.git
+git clone --single-branch --branch pokedextemplate https://github.com/adityar15/vuejsdemo.git pokedexapp
 ```
 
 ## Project Setup
