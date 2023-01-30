@@ -21,6 +21,7 @@ git clone --single-branch --branch pokedextemplate https://github.com/adityar15/
 After cloning the project cd into the downloaded project and then run the command in your terminal
 
 ```sh
+cd pokedexapp
 npm install
 ```
 
