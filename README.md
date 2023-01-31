@@ -25,29 +25,18 @@ cd pokedexapp
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Compile and Hot-Reload for Development (to run the project)
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### Compile and Minify for Production (final build)
 
 ```sh
 npm run build
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
 
 
 ## References
