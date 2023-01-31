@@ -9,14 +9,12 @@
 </template>
 
 <script setup>
-import {defineAsyncComponent} from "vue"
-import { RouterView } from "vue-router"
+import { defineAsyncComponent } from "vue";
+import { RouterView } from "vue-router";
 // lazy load the Header component
-const Header = defineAsyncComponent(() => import("./components/Header.vue"))
+const Header = defineAsyncComponent(() => import("./components/Header.vue"));
 // lazy load the Layout component
-const Layout = defineAsyncComponent(() => import("./components/Layout.vue"))
+const Layout = defineAsyncComponent(() => import("./components/Layout.vue"));
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

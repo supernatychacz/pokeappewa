@@ -54,6 +54,7 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   // code to add auth middleware for routes
+  next()
 })
 
 export default router
