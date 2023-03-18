@@ -33,6 +33,7 @@
 import { useRoute } from "vue-router";
 import pokemons from "@/assets/sampledataset.json";
 import { onMounted, ref } from "vue";
+import client from "@/assets/apiclient.js";
 import axios from "axios";
 
 const route = useRoute();
@@ -43,16 +44,27 @@ const pokemonDetails = ref({});
 const image = ref("");
 
 onMounted(() => {
-  pokemonDetails.value = pokemons.filter(
-    (item) => item.name.toLowerCase() == route.params.name.toLowerCase()
-  )[0];
+  // pokemonDetails.value = pokemons.filter(
+  //  (item) => item.name.toLowerCase() == route.params.name.toLowerCase()
+  // )[0];
 
-  axios
-    .get(
-      `https://pokeapi.co/api/v2/pokemon/${pokemonDetails.value.name.toLowerCase()}`
-    )
-    .then((data) => {
-      image.value = data.data.sprites.other["official-artwork"].front_default;
+  client
+    .get(`/pokemon/${route.params.name}`)
+    .then((res) => {
+      console.log("response received", res.data);
+      pokemonDetails.value = res.data;
+
+      axios
+        .get(
+          `https://pokeapi.co/api/v2/pokemon/${pokemonDetails.value.name.toLowerCase()}`
+        )
+        .then((data) => {
+          image.value =
+            data.data.sprites.other["official-artwork"].front_default;
+        });
+    })
+    .catch((errors) => {
+      console.log("error", errors);
     });
 });
 </script>
