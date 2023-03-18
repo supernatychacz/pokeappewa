@@ -1,9 +1,14 @@
 <script setup>
+import UserForm from "@/components/UserForm.vue";
 
+function login(user) {
+  // api request
+}
 </script>
 
 <template>
-    <div>
-      <!-- Login page -->
-    </div>
+  <div>
+    <UserForm formType="signin" @submit="login" />
+    <!--- Login page --->
+  </div>
 </template>
